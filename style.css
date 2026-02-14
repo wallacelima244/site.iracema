@@ -479,3 +479,68 @@ textarea{ min-height: 120px; resize: vertical; }
   .lead{ font-size: 15.5px; }
   .cards{ grid-template-columns: 1fr; }
 }
+/* ===== ANIMAÇÕES (bem animado e suave) ===== */
+
+.reveal{
+  opacity: 0;
+  transform: translateY(40px) scale(.96);
+  transition: opacity .85s cubic-bezier(.22,.61,.36,1),
+              transform .85s cubic-bezier(.22,.61,.36,1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible{
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Hover premium (cards/painéis) */
+.card, .hero__card, .panel, .numCard{
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.card:hover, .hero__card:hover, .panel:hover, .numCard:hover{
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 25px 45px rgba(0,0,0,.12);
+}
+
+/* Brilho passando no botão */
+.btn{
+  position: relative;
+  overflow: hidden;
+}
+.btn::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-120%;
+  width:120%;
+  height:100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,.38), transparent);
+  transition: .7s;
+}
+.btn:hover::after{ left:120%; }
+
+/* Hero entrando suave */
+.hero h1{
+  animation: heroFade 1s ease forwards;
+}
+@keyframes heroFade{
+  from{ opacity:0; transform:translateY(28px); }
+  to{ opacity:1; transform:translateY(0); }
+}
+
+/* WhatsApp pulsando */
+.wa{
+  animation: pulse 2.5s infinite;
+}
+@keyframes pulse{
+  0%{ box-shadow:0 0 0 0 rgba(37,211,102,.42); }
+  70%{ box-shadow:0 0 0 18px rgba(37,211,102,0); }
+  100%{ box-shadow:0 0 0 0 rgba(37,211,102,0); }
+}
+
+/* Respeita quem não quer animação */
+@media (prefers-reduced-motion: reduce){
+  *{ animation:none !important; transition:none !important; }
+  .reveal{ opacity:1 !important; transform:none !important; }
+}
+
