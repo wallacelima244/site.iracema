@@ -22,7 +22,7 @@
     <div class="container header__inner">
       <a class="brand" href="#inicio" aria-label="Ir para o início">
         <img class="brand__avatar"
-          src='terapeuta.jpg.png'
+          src="terapeuta.jpg.png"
           alt="Foto da terapeuta"
           loading="lazy" />
         <span class="brand__text">
@@ -70,20 +70,14 @@
           <span>Agendamentos abertos</span>
         </div>
 
-        <h1>Um espaço seguro para se entender, se fortalecer e seguir com mais leveza.</h1>
+        <h1>Um espaço seguro de acolhimento e transformação, onde você desenvolve autoconhecimento, fortalecimento emocional e mais leveza para viver.</h1>
 
         <p class="lead">
-          Atendimento terapêutico com ética e sigilo. Um processo claro, humano e respeitoso com o seu tempo —
-          com foco em evolução prática no dia a dia.
+          Atendimento terapêutico realizado com ética, sigilo e escuta especializada, oferecendo um processo estruturado e acolhedor que respeita o seu tempo e promove desenvolvimento emocional, clareza interna e transformações consistentes no cotidiano.
         </p>
 
+        <!-- ALTERAÇÃO: remove o botão principal de agendamento do HERO (mantém só ver como funciona) -->
         <div class="hero__actions">
-          <a class="btn btn--primary"
-            target="_blank" rel="noopener"
-            href="https://wa.me/5511985820586?text=Ol%C3%A1%2C%20Dr%C2%AA%20Iracema!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20sess%C3%A3o.">
-            Agendar pelo WhatsApp
-          </a>
-
           <a class="btn btn--ghost" href="#como">Ver como funciona</a>
         </div>
 
@@ -106,7 +100,7 @@
       <aside class="hero__card reveal">
         <div class="hero__image">
           <img
-            src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80"
+            src=https://img.freepik.com/fotos-gratis/bela-jovem-doutora-olhando-a-camera-no-escritorio_1301-7781.jpg
             alt="Ambiente acolhedor para atendimento"
             loading="lazy" />
         </div>
@@ -114,10 +108,10 @@
         <div class="hero__panel">
           <div class="panel__top">
             <div>
-              <h2>Drª Iracema</h2>
+              <h2>Draª Iracema</h2>
               <p class="muted">Terapia com acolhimento e direção</p>
             </div>
-            <span class="pill">WhatsApp</span>
+            <span class="pill">Agende sua consulta </span>
           </div>
 
           <div class="panel__grid">
@@ -220,7 +214,9 @@
       <div class="section__head reveal">
         <p class="kicker">Atendimentos</p>
         <h2>Áreas em que posso te ajudar</h2>
-        <p class="muted max"></p>
+
+        <!-- ALTERAÇÃO: preenchido porque estava vazio -->
+        <p class="muted max">Atendimento individual e acolhedor, com foco em clareza emocional, fortalecimento interno e escolhas mais saudáveis no dia a dia.</p>
       </div>
 
       <div class="cards">
@@ -287,8 +283,8 @@
 
       <div class="numbers">
         <div class="numCard reveal"><strong>100%</strong><span>Foco em sigilo e ética</span></div>
-        <div class="numCard reveal"><strong>1:1</strong><span>Atendimento individual</span></div>
-        <div class="numCard reveal"><strong>Rápido</strong><span>Agendamento via WhatsApp</span></div>
+        <div class="numCard reveal"><strong>Apenas Você e a terapeuta</strong><span>Atendimento individual</span></div>
+        <div class="numCard reveal"><strong>Rápido e prático via whatsaap</strong><span>Agendamento via WhatsApp</span></div>
       </div>
     </div>
   </section>
@@ -300,9 +296,7 @@
         <p class="kicker">Sobre</p>
         <h2>Presença, cuidado e respeito ao seu tempo</h2>
         <p class="muted">
-         “Você não precisa enfrentar tudo sozinho. A terapia é um espaço seguro para compreender suas emoções, fortalecer sua mente e construir uma vida com mais equilíbrio e clareza.”
-
-
+          “Você não precisa enfrentar tudo sozinho. A terapia é um espaço seguro para compreender suas emoções, fortalecer sua mente e construir uma vida com mais equilíbrio e clareza.”
         </p>
 
         <div class="note">
@@ -394,7 +388,7 @@
 
         <label>
           Nome
-          <input name="nome" type="text" placeholder="Ex: Maria" required />
+          <input name="nome" type="text" placeholder="Ex: Wallace" required />
         </label>
 
         <label>
@@ -476,7 +470,7 @@
       const msg = form.mensagem.value.trim();
 
       const texto =
-`Olá, Drª Iracema! Vim pelo site e gostaria de agendar uma sessão.
+`Olá, Draª Iracema! Vim pelo site e gostaria de agendar uma sessão.
 
 Nome: ${nome}
 Telefone: ${tel}
